@@ -2,39 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* QRS-Me Design System - Professional AI Platform
+All colors MUST be HSL. Modern gradients and professional typography.
 */
 
 @layer base {
   :root {
+    /* Core Colors - Professional Blue/Purple Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - AI Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 55%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Neural Purple */
+    --secondary: 251 91% 95%;
+    --secondary-foreground: 251 91% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Clean Grays */
+    --muted: 220 13% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Tech Purple */
+    --accent: 262 83% 70%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    /* Gradients - Modern AI Aesthetics */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(262 83% 70%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60% / 0.05) 0%, hsl(262 83% 70% / 0.05) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 13% 98%) 100%);
+    
+    /* Shadows - Professional Depth */
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
+    --shadow-card-hover: 0 10px 25px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
+    --shadow-button: 0 4px 14px 0 hsl(217 91% 60% / 0.25);
+
+    /* Typography Scale */
+    --font-display: 'Inter', system-ui, sans-serif;
 
     --radius: 0.5rem;
 
@@ -100,6 +119,46 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-display antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Button Variant */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-[var(--shadow-button)] hover:scale-105 active:scale-95;
+  }
+
+  /* Feature Card Component */
+  .feature-card {
+    @apply bg-[var(--gradient-card)] p-8 rounded-xl border border-border transition-all duration-300 hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-1;
+  }
+
+  /* Section Container */
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 py-20;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  /* Hero Background */
+  .hero-bg {
+    @apply bg-[var(--gradient-hero)] relative overflow-hidden;
+  }
+
+  /* Smooth Animations */
+  .animate-fade-in {
+    @apply animate-in fade-in duration-700;
+  }
+
+  .animate-slide-up {
+    @apply animate-in slide-in-from-bottom-4 duration-700;
   }
 }
