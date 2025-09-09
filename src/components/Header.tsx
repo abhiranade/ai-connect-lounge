@@ -9,7 +9,7 @@ const Header = () => {
         </div>
         <nav className="flex items-center space-x-8">
           <Button 
-            className="bg-gradient-to-r from-primary via-accent to-secondary text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)] hover:scale-105 animate-pulse"
+            className="bg-gradient-to-r from-primary via-accent to-secondary text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover:shadow-[0_0_15px_hsl(var(--primary)/0.4)] hover:scale-102"
             variant="ghost"
           >
             Join Waitlist
