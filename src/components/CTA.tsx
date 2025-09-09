@@ -8,7 +8,7 @@ const CTA = () => {
         <div className="animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Join Waitlist -{" "}
-            <span className="gradient-text">Limited Beta Access</span>
+            <span className="gradient-text-alt">Limited Beta Access</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Be among the first to experience the future of AI-powered networking. 

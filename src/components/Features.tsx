@@ -23,7 +23,7 @@ const Features = () => {
     <section id="features" className="section-container">
       <div className="text-center mb-16 animate-fade-in">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          <span className="gradient-text">AI Connect Technology™</span> - World's First
+          <span className="gradient-text-alt">AI Connect Technology™</span> - World's First
         </h2>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
           Revolutionary AI-powered networking that transforms every professional interaction
